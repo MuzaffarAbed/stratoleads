@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b1d26;
+  --navy: #0b1d26;
+  --teal: #33c0ca;
+  --teal-dark: #279ca5;
+  --teal-deep: #1c7c84;
+  --teal-light: #e6f7f8;
+  --teal-soft: #c4ecef;
+  --gold: #33c0ca;
+  --gold-muted: #7e9096;
+  --gold-deep: #1c7c84;
+  --surface: #f5f8f8;
+  --page: #ffffff;
+  --border: #dce8e9;
+  --text: #0b1d26;
+  --muted: #52656b;
+  --danger: #9b2c2c;
+  --success: #1c7c84;
+  --focus: #1c7c84;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-navy: var(--navy);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-light: var(--teal-light);
+  --color-teal-soft: var(--teal-soft);
+  --color-gold: var(--gold);
+  --color-gold-muted: var(--gold-muted);
+  --color-gold-deep: var(--gold-deep);
+  --color-surface: var(--surface);
+  --color-page: var(--page);
+  --color-line: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-focus: var(--focus);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: 0 16px 40px rgba(11, 29, 38, 0.06);
+}
+
+body {
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+@layer components {
+  .glass {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.66) 0%,
+      rgba(255, 255, 255, 0.28) 46%,
+      rgba(214, 241, 243, 0.34) 100%
+    );
+    -webkit-backdrop-filter: blur(40px) saturate(1.6);
+    backdrop-filter: blur(40px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      inset 0 18px 32px rgba(255, 255, 255, 0.28),
+      0 18px 50px rgba(11, 29, 38, 0.08);
+  }
+}
+
+::selection {
+  background: #c4ecef;
+  color: #0b1d26;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

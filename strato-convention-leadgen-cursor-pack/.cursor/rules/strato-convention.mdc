@@ -1,0 +1,23 @@
+---
+description: STRATO Convention Lead Generation engineering constraints
+alwaysApply: true
+---
+
+- Use Next.js App Router and TypeScript strict mode.
+- Follow the product requirements and UI/UX design spec in the root Markdown files.
+- Keep server-only integrations in route handlers or server-only modules.
+- Never expose secrets through `NEXT_PUBLIC_*`, client components, logs, or API responses.
+- Validate every untrusted request on the server.
+- `Other` product interest requires a non-empty Comment.
+- Product-interest choices and ordering must match requirements exactly.
+- Leads must be written to Google Sheets and trigger configured notification email; never fake success in production.
+- Business cards must be configurable through the protected admin interface, not hardcoded per employee.
+- Only active cards are publicly listed or retrievable.
+- Generate a valid vCard file and QR code using the deployed canonical URL.
+- Do not invent STRATO branding assets, customer logos, metrics, or staff details.
+- Keep the UI mobile-first, accessible, and enterprise-professional.
+- Include loading, empty, success, error, and unavailable states.
+- Prefer small reusable components and clear types.
+- Do not suppress TypeScript/lint errors as a shortcut.
+- Do not add paid third-party APIs unless explicitly approved.
+- Run lint, typecheck, tests, and production build before declaring a phase complete.
