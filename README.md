@@ -63,4 +63,4 @@ The browser keeps one submission ID for the form. Apps Script appends a `Leads` 
 
 - `google-apps-script/README.md` — sheet, script properties, and deployment
 - `docs/DEPLOYMENT.md` — hosting checklist
-- `docs/CONVENTION_DAY.md` — manual test checklist
+- `docs/CONVENTION_DAY.md` — manual test checklists
